@@ -5,12 +5,15 @@ import {
   View,
   Text,
   TouchableOpacity,
-  Image
+  Image,
+  StatusBar
 } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 import { Metrics, Colors, Fonts } from '../Themes'
+
+StatusBar.setBackgroundColor(Colors.blackHeader)
 
 class CustomNavBar extends React.Component {
   render () {
