@@ -8,6 +8,8 @@ import {
 } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 
+import { Colors, Fonts } from '../Themes'
+
 export default class WelcomeScreen extends Component {
   render() {
     return (
@@ -32,16 +34,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: Colors.black,
   },
   welcome: {
-    fontSize: 20,
+    fontSize: Fonts.size.large,
+    color: Colors.white,
     textAlign: 'center',
     margin: 10,
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: Colors.white,
     marginBottom: 5,
   },
 });

@@ -8,6 +8,8 @@ import {
 } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 
+import { Colors } from '../Themes'
+
 export default class HomeScreen extends Component {
   render() {
     return (
@@ -28,7 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: Colors.black,
   },
   welcome: {
     fontSize: 20,
