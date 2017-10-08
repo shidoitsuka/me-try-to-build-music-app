@@ -1,47 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import React from 'react'
+import { Router, Stack, Scene } from 'react-native-router-flux'
 
-import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import WelcomeScreen from './Components/WelcomeScreen'
+import HomeScreen from './Components/HomeScreen'
 
-export default class App extends Component<{}> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to my music app that built with React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-      </View>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <Stack key='root'>
+      <Scene key='welcomeScreen' component={WelcomeScreen} title={'Welcome'} />
+      <Scene key='homeScreen' component={HomeScreen} title={'Home'} />
+    </Stack>
+  </Router>
+)
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+export default App
