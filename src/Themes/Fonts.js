@@ -1,3 +1,12 @@
+const type = {
+  thin: 'Montserrat-Thin',
+  light: 'Montserrat-Light',
+  extraLight: 'Montserrat-ExtraLight',
+  medium: 'Montserrat-Medium',
+  regular: 'Montserrat-Regular',
+  semiBold: 'Montserrat-SemiBold'
+}
+
 const size = {
   h1: 38,
   h2: 34,
@@ -12,4 +21,4 @@ const size = {
   tiny: 8.5
 }
 
-export default { size }
+export default { size, type }

@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.white,
-    fontSize: Fonts.size.regular
+    fontSize: Fonts.size.regular,
+    fontFamily: Fonts.type.semiBold
   },
   leftButton: {
     flex: 1,

@@ -14,16 +14,30 @@ export default class WelcomeScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to my music app that built with React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Button
-          onPress={() => Actions.homeScreen()}
-          title={'Home'}
-        />
+        <View style={{ margin: 10 }}>
+          <Text style={styles.title}>
+            Senyummu Hanya Untukku
+          </Text>
+          <Text style={styles.singer}>
+            Trisouls . Senyummu Hanya Untukku
+          </Text>
+        </View>
+        <View style={{ margin: 10 }}>
+          <Text style={styles.title}>
+            Pandangan Pertama
+          </Text>
+          <Text style={styles.singer}>
+            Slank, Nirina Zubir
+          </Text>
+        </View>
+        <View style={{ margin: 10 }}>
+          <Text style={styles.title}>
+            Dia
+          </Text>
+          <Text style={styles.singer}>
+            Anji . Dia
+          </Text>
+        </View>
       </View>
     );
   }
@@ -32,19 +46,19 @@ export default class WelcomeScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: Colors.black,
   },
-  welcome: {
-    fontSize: Fonts.size.large,
+  title: {
+    fontSize: Fonts.size.regular,
+    fontFamily: Fonts.type.regular,
     color: Colors.white,
-    textAlign: 'center',
-    margin: 10,
+    textAlign: 'left',
+    marginBottom: 5
   },
-  instructions: {
-    textAlign: 'center',
+  singer: {
+    fontFamily: Fonts.type.light,
+    fontSize: Fonts.size.medium,
     color: Colors.white,
-    marginBottom: 5,
+    textAlign: 'left'
   },
 });
