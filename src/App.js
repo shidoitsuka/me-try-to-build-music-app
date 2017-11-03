@@ -11,8 +11,8 @@ const App = () => (
       key='root'
       navBar={CustomNavBar}
     >
+      <Scene key='homeScreen' component={HomeScreen} title={'Home'} />
       <Scene key='welcomeScreen' component={WelcomeScreen} title={'Welcome'} />
-      <Scene key='homeScreen' component={HomeScreen} title={'Home'} back />
     </Scene>
   </Router>
 )

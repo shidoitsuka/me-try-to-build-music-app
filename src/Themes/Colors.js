@@ -1,7 +1,7 @@
 const colors = {
   white: '#FFFFFF',
-  black: '#000000',
-  blackHeader: '#150F0E'
+  black: '#121315',
+  blackHeader: '#19191B'
 }
 
 export default colors
