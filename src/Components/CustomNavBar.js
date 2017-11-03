@@ -8,12 +8,12 @@ import {
   Image,
   StatusBar,
 } from 'react-native'
-import { Actions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 import { Metrics, Colors, Fonts } from '../Themes'
 
 StatusBar.setBackgroundColor(Colors.blackHeader)
+StatusBar.setBarStyle('light-content')
 
 class CustomNavBar extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class CustomNavBar extends React.Component {
       <View style={styles.container}>
         <View style={styles.leftContainer}>
           {back ? (
-            <TouchableOpacity onPress={Actions.pop} style={styles.leftButton}>
+            <TouchableOpacity onPress={() => {}} style={styles.leftButton}>
               <Icon name="ios-arrow-back" size={25} color={Colors.white} />
             </TouchableOpacity>
           ) : null}
@@ -52,6 +52,10 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.blackHeader,
     height: Metrics.navBarheight,
     paddingTop: Platform.OS === 'ios' ? 20 : 0,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
   },
   leftContainer: {
     flex: 1,

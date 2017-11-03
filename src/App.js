@@ -1,20 +1,17 @@
 import React from 'react'
-import { Router, Stack, Scene } from 'react-native-router-flux'
+import { StackNavigator } from 'react-navigation'
 
 import WelcomeScreen from './Components/WelcomeScreen'
-import HomeScreen from './Components/HomeScreen'
+import SongScreen from './Components/SongScreen'
 import CustomNavBar from './Components/CustomNavBar'
 
-const App = () => (
-  <Router>
-    <Scene
-      key='root'
-      navBar={CustomNavBar}
-    >
-      <Scene key='homeScreen' component={HomeScreen} title={'Home'} />
-      <Scene key='welcomeScreen' component={WelcomeScreen} title={'Welcome'} />
-    </Scene>
-  </Router>
-)
+const App = StackNavigator({
+  SongScreen: {
+    screen: SongScreen,
+    navigationOptions: {
+      header: <CustomNavBar title={'Songs'} />,
+    }
+  },
+})
 
 export default App

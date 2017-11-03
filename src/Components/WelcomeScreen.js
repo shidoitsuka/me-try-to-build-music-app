@@ -6,7 +6,6 @@ import {
   View,
   Button
 } from 'react-native'
-import { Actions } from 'react-native-router-flux'
 
 import { Colors, Fonts } from '../Themes'
 
